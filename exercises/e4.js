@@ -5,10 +5,14 @@
 
 export function findMinValueInArray(array) {
   // Your code goes here...
-}
+   return Math.min(...array);
+  }
+
+
 
 export function findMaxValueInArray(array) {
   // Your code goes here...
+  return Math.max(...array)
 }
 
 // === TEST YOURSELF ===
