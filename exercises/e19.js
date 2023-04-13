@@ -1,4 +1,3 @@
-
 // EXERCISE 19
 // Please, read the exercise-info/reverse.md to get the initial data of what is the expected result of this exercise.
 // reverseArray([1, 2, 3 ,4]) => [4, 3, 2, 1]
@@ -6,15 +5,19 @@
 
 export function reverseArray(array) {
   // Your code goes here...
-  for (let i = 0; i < array.length / 2; i++) {
-    const tempNum = array[i];
-    array[i] = array[array.length - 1 - i];
-    array[array.length - 1 - i] = tempNum;
+  const newArr = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    newArr.push(array[i]);
   }
-  return array;
+  return newArr;
+
+  // for (let i = 0; i < array.length / 2; i++) {
+  //   const tempNum = array[i];
+  //   array[i] = array[array.length - 1 - i];
+  //   array[array.length - 1 - i] = tempNum;
+  // }
+  // return array;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-19"
